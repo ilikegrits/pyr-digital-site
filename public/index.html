@@ -12,7 +12,6 @@
 <link rel="icon" type="image/png" href="assets/pyr-glyph.png">
 </head>
 <body>
-
 <header class="site-nav">
   <div class="wrap nav-row">
     <a href="#top" class="logo"><img src="assets/pyr-glyph.png" alt="PYR Digital" height="30"></a>
@@ -28,9 +27,7 @@
     </div>
   </div>
 </header>
-
 <main id="top">
-
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
@@ -43,7 +40,6 @@
           <a href="#services" class="link-arrow">See pricing</a>
         </div>
       </div>
-
       <div class="kpi-card">
         <div class="kpi-label">Attributed marketing revenue, rebuilt from scratch</div>
         <div class="kpi-number">5x</div>
@@ -63,7 +59,6 @@
       </div>
     </div>
   </section>
-
   <!-- SERVICES -->
   <section id="services" class="section-alt">
     <div class="wrap">
@@ -72,7 +67,6 @@
         <h2>Google Ads management, from $1,000/mo + ad spend</h2>
         <p>Built for local and regional businesses running $1,500–$50,000+ a month in paid search and social. Every tier includes weekly checks and a monthly readout — nothing runs unattended.</p>
       </div>
-
       <div class="svc-group">
         <div class="svc-group-title">Google Ads (PPC) management</div>
         <div class="tier-list">
@@ -126,7 +120,6 @@
           </div>
         </div>
       </div>
-
       <div class="svc-group">
         <div class="svc-group-title">Social media ads management</div>
         <div class="tier-list">
@@ -181,7 +174,6 @@
         </div>
         <div class="svc-note">Run Google Ads and Social together and the second channel's monthly fee drops 15%. Creative production is quoted separately.</div>
       </div>
-
       <div class="svc-group">
         <div class="svc-group-title">Productized retainers</div>
         <div class="retainer-grid">
@@ -209,7 +201,6 @@
       </div>
     </div>
   </section>
-
   <!-- APPROACH -->
   <section id="approach">
     <div class="wrap">
@@ -250,7 +241,6 @@
       </div>
     </div>
   </section>
-
   <!-- ABOUT -->
   <section id="about" class="section-alt">
     <div class="wrap about-grid">
@@ -270,7 +260,6 @@
       </div>
     </div>
   </section>
-
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="wrap contact-grid">
@@ -282,13 +271,29 @@
         <div class="row"><span>Email</span><span>neil.moree@protonmail.com</span></div>
         <div class="row"><span>Response time</span><span>Within 1 business day</span></div>
         <div class="row"><span>First step</span><span>30-min account review</span></div>
-        <a href="mailto:neil.moree@protonmail.com?subject=PYR%20Digital%20—%20Let's%20talk" class="btn btn-primary">Schedule an online meeting</a>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span>What are you currently spending, and where?</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <input type="text" name="company" class="hp-field" tabindex="-1" autocomplete="off">
+
+          <button type="submit" class="btn btn-primary" id="contactSubmit">Send message</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
   </section>
-
 </main>
-
 <footer>
   <div class="wrap footer-row">
     <img src="assets/pyr-glyph.png" alt="PYR Digital" height="22">
@@ -296,7 +301,6 @@
     <a href="mailto:neil.moree@protonmail.com">neil.moree@protonmail.com</a>
   </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
