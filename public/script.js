@@ -34,7 +34,7 @@ if (form) {
       const result = await resp.json();
 
       if (resp.ok && result.ok) {
-        statusEl.textContent = "Thanks — I'll get back to you within a business day.";
+        statusEl.textContent = "Thanks! I'll get back to you within a business day.";
         statusEl.className = 'form-status success';
         form.reset();
       } else {
