@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PYR Digital agency website",
   "main": "server.js",
+  "private": true,
   "scripts": {
     "start": "node server.js"
   },
