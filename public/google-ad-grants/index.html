@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14202B">
+<title>Google Ad Grant Management for Nonprofits | PYR Digital</title>
+<meta name="description" content="PYR Digital gets 501(c)(3)s approved for the $10,000/month Google Ad Grant and manages it every month so it stays compliant and active. Google Partner since 2013. Free eligibility review.">
+<link rel="canonical" href="https://pyr.digital/google-ad-grants/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Google Ad Grant Management for Nonprofits | PYR Digital">
+<meta property="og:description" content="$10,000/month in free Google Ads is sitting unused at most nonprofits. Get a free eligibility review from a Google Partner since 2013.">
+<meta property="og:image" content="../assets/pyr-icon.png">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Fraunces:ital,opsz,wght@1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+
+<!--
+  GOOGLE ADS CONVERSION TRACKING
+  Paste your Google tag (gtag.js) snippet here, right after the stylesheet,
+  so it loads on every visit from your PPC campaigns:
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+
+  The form below already calls a `reportFormConversion()` stub after a
+  successful submit — fill it in with your Google Ads conversion ID/label
+  and it will fire automatically. See the bottom of this file.
+-->
+
+<style>
+  /* Landing-page-only additions — kept local so the rest of the site is untouched. */
+  .lp-header .nav-links a{ font-size: 0.9rem; }
+  .lp-note{ font-size:0.86rem; color:var(--ink-soft); margin-top:14px; }
+  .lp-included{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0; border:1px solid var(--line); background:var(--paper); }
+  .lp-included li{ display:flex; gap:16px; align-items:flex-start; padding:22px 26px; border-top:1px solid var(--line); }
+  .lp-included li:first-child{ border-top:none; }
+  .lp-included svg{ flex-shrink:0; margin-top:3px; width:20px; height:20px; }
+  .lp-included p{ color:var(--ink-soft); font-size:0.98rem; }
+  .lp-included strong{ color:var(--ink); font-weight:600; }
+  .lp-sticky-cta{ display:none; }
+  @media (max-width: 700px){
+    .lp-sticky-cta{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:50;
+      padding:12px 16px; background:var(--paper); border-top:1px solid var(--line);
+      box-shadow:0 -6px 18px rgba(20,32,43,0.12);
+    }
+    .lp-sticky-cta .btn{ flex:1; justify-content:center; }
+    body{ padding-bottom:64px; }
+  }
+
+  /* Hero: headline on the left, form immediately visible on the right */
+  .hero .wrap.hero-grid{ display:grid; grid-template-columns:1.2fr 0.95fr; gap:44px; align-items:start; }
+  .hero-form-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:8px;
+    padding:30px 30px 26px; box-shadow:0 18px 40px rgba(20,32,43,0.09);
+    position:sticky; top:96px;
+  }
+  .hero-form-card h3{ font-size:1.3rem; margin-bottom:10px; }
+  .hero-form-card > p.deck{ color:var(--ink-soft); font-size:0.94rem; margin-bottom:20px; }
+  .hero-form-card form{ display:flex; flex-direction:column; gap:14px; }
+  .hero-form-card label{ font-size:0.83rem; margin-bottom:4px; }
+  .hero-form-card .submit-btn{ align-self:stretch; justify-content:center; margin-top:4px; }
+  @media (max-width: 900px){
+    .hero .wrap.hero-grid{ grid-template-columns:1fr; gap:32px; }
+    .hero-form-card{ position:static; }
+  }
+
+  /* Fix: .grant-step / .grant-figure text colors below are tuned for the
+     DARK "grant-section" background — this "How it works" section sits on
+     the regular light background, so it needs the dark-page palette. */
+  #how .grant-step{ border-top-color:var(--line); }
+  #how .grant-step:last-child{ border-bottom-color:var(--line); }
+  #how .grant-step .n{ color:var(--ink-soft); }
+  #how .grant-step h4{ color:var(--ink); }
+  #how .grant-step p{ color:var(--ink-soft); }
+
+  .lp-closing-cta{ background:var(--ink); color:var(--paper); padding:64px 0; text-align:center; }
+  .lp-closing-cta h2{ color:var(--paper); margin-bottom:14px; }
+  .lp-closing-cta p{ color:#B9C2C8; max-width:480px; margin:0 auto 26px; }
+</style>
+</head>
+<body>
+
+<header id="siteHeader" class="lp-header">
+  <div class="nav">
+    <a href="../index.html#top" class="brand">
+      <img src="../assets/pyr-icon.png" alt="PYR Digital">
+      <span class="brand-name">PYR Digital</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#how">How it works</a>
+      <a href="#included">What's included</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+19802691892" class="phone-link">980.269.1892</a>
+      <a href="#apply" class="btn">Check my eligibility</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-inner">
+        <span class="kicker">Google Ad Grant management for 501(c)(3)s</span>
+        <h1 class="headline">Your nonprofit already qualifies for $10,000 a month in free Google Ads. <span class="accent-word">Most never see a dollar of it.</span></h1>
+        <p class="sub">Google awards eligible nonprofits $10,000 every month in free Search advertising — and suspends the accounts that fall out of compliance. PYR Digital gets your organization approved, builds a compliant campaign, and manages it every month so the grant keeps running instead of quietly lapsing.</p>
+
+        <div class="hero-cta">
+          <a href="#apply" class="btn">Get my free eligibility review →</a>
+          <a href="#how" class="btn btn-outline">See how it works</a>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat"><b>$10,000</b><span>in free Google Ads most grant accounts leave unspent</span></div>
+          <div class="stat"><b>5%</b><span>minimum click-through rate required to stay compliant</span></div>
+          <div class="stat"><b>$120K/yr</b><span>in ad credit available to a properly run account</span></div>
+        </div>
+      </div>
+
+      <div class="hero-form-card" id="apply">
+        <h3>Get my free eligibility review</h3>
+        <p class="deck">No cost, no obligation. I'll tell you honestly whether it's worth pursuing.</p>
+        <form id="contactForm" novalidate>
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="msg">Organization name &amp; website</label>
+            <input id="msg" name="message" type="text" placeholder="e.g. Riverside Youth Alliance, riversideyouth.org" required>
+          </div>
+          <div>
+            <label for="existingGrant">Do you already have a Google Ad Grant?</label>
+            <select id="existingGrant" name="existing_grant" required>
+              <option value="" disabled selected>Select one…</option>
+              <option value="No, not yet">No, not yet</option>
+              <option value="Yes, but underused or at risk">Yes, but underused or at risk</option>
+              <option value="Yes, and it's running well">Yes, and it's running well</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </div>
+          <input type="text" name="company" class="hp-field" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="source" value="google-ad-grants-landing-page">
+          <button type="submit" class="btn submit-btn" id="contactSubmit">Get my free eligibility review</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <p class="lp-note">Response within 1 business day. Never sold or shared.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS STRIP -->
+  <div class="cred-strip">
+    <div class="wrap cred-row">
+      <span class="cred-badge">Google Partner since 2013</span>
+      <span class="cred-badge">Google Ads Certified</span>
+      <span class="cred-badge">Google Analytics (GA4) Certified</span>
+      <span class="cred-badge">Google Tag Manager Certified</span>
+      <span class="cred-badge">Former nonprofit fundraiser &amp; overseas staff</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="grant-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Why most Grant accounts underperform</span>
+        <h2>The grant doesn't fail. The account does.</h2>
+        <p class="lede">Google doesn't take the money back because a nonprofit doesn't need it — it suspends accounts that drift out of compliance. A click-through rate that slips below 5%. Keyword structures that violate policy. An account nobody has actually looked at since the day it was approved.</p>
+      </div>
+
+      <div class="grant-figures">
+        <div class="grant-figure"><b>$10,000</b><span>in free Google Search ads available every month to eligible 501(c)(3)s</span></div>
+        <div class="grant-figure"><b>5% CTR</b><span>the minimum click-through rate Google requires to keep the account active</span></div>
+        <div class="grant-figure"><b>Search only</b><span>the grant covers text ads on Google Search — not display, video or a cash donation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">How it works</span>
+        <h2>Getting the grant is the easy part.</h2>
+        <p class="lede">Staying compliant with it, month after month, is the actual job — and it's the part that gets skipped when nobody owns it.</p>
+      </div>
+      <div class="grant-steps">
+        <div class="grant-step">
+          <span class="n">01</span>
+          <div>
+            <h4>Confirm eligibility &amp; get set up</h4>
+            <p>Verify your organization qualifies, get Google for Nonprofits and Ad Grants access in place, and put a compliant site and conversion setup underneath it before spending a dollar.</p>
+          </div>
+        </div>
+        <div class="grant-step">
+          <span class="n">02</span>
+          <div>
+            <h4>Build for compliance from day one</h4>
+            <p>Structure ad groups, keywords, sitelinks and geo-targeting the way Google's grant policy requires — avoiding the single-word and overly broad keywords that quietly tank click-through rate.</p>
+          </div>
+        </div>
+        <div class="grant-step">
+          <span class="n">03</span>
+          <div>
+            <h4>Optimize for mission outcomes</h4>
+            <p>Point the budget at what the organization actually needs — donations, volunteer sign-ups, program registrations, awareness — with conversion tracking that proves it's working.</p>
+          </div>
+        </div>
+        <div class="grant-step">
+          <span class="n">04</span>
+          <div>
+            <h4>Manage it monthly, permanently</h4>
+            <p>The grant renews monthly and can be suspended for inactivity or non-compliance. Someone needs to actually watch the account — that's the ongoing engagement, and it's the same discipline I'd apply to any paid account.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section id="included">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">What's included</span>
+        <h2>Everything between "we're eligible" and "it's actually working."</h2>
+      </div>
+      <ul class="lp-included">
+        <li>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="#2E6B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>Eligibility review, application &amp; Google for Nonprofits setup</strong> — I confirm you qualify and handle the paperwork so it isn't stuck on your team's plate.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="#2E6B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>Campaign structure built to policy</strong> — ad groups, sitelinks and keyword rules that meet Google's grant requirements from the first day it's live.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="#2E6B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>Conversion tracking for what your mission actually needs</strong> — donations, sign-ups, volunteer and program registrations, tied back to the campaigns that produced them.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="#2E6B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>Ongoing monthly optimization</strong> — protecting the 5% CTR requirement and adjusting the account before Google flags it, not after.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="#2E6B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>Direct access to the person doing the work</strong> — no account manager relaying updates from a junior team you never talk to.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT / TRUST -->
+  <section class="bio-teaser" id="bio-teaser">
+    <div class="wrap bio-teaser-grid">
+      <div class="avatar-block" aria-hidden="true"><span>N</span></div>
+      <div>
+        <h2>Before this was an agency, it was a fundraiser and a fundraised-for cause.</h2>
+        <p>I spent years working for a nonprofit, raising full-time financial support to serve overseas in cross-cultural, multi-lingual contexts. I know what it's like to need every dollar — donated or granted — to actually produce something, because I've lived on the other side of that budget.</p>
+        <blockquote style="border-left-color:#8FCB9F; margin-top:22px;">
+          The goal isn't to run more ads. It's to make the ad budget you already have — earned or granted — work harder than it currently does.
+          <cite style="color:#B9C2C8;">— Neil, Founder, PYR Digital</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Questions worth asking</span>
+        <h2>Straight answers.</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item show">
+          <h4>Is our nonprofit actually eligible for the Google Ad Grant?</h4>
+          <p>Most registered 501(c)(3)s with a website that clearly explains their mission qualify, with a few exclusions (hospitals and schools have separate Google for Education programs, for instance). The first step of any engagement is confirming eligibility before anything else — that review is free.</p>
+        </div>
+        <div class="faq-item show">
+          <h4>We already have a Grant account. It's suspended, or barely spending. Can you fix that?</h4>
+          <p>Yes, in most cases. Recovering a suspended or underperforming account is harder than building one right from the start, but it's routinely possible — restructuring the account to meet Google's current policy and rebuilding the click-through rate back above the compliance floor.</p>
+        </div>
+        <div class="faq-item show">
+          <h4>What does this actually cost?</h4>
+          <p>The $10,000/month in ad spend is free — that's Google's grant, not a fee to me. My fee is a clear, scoped amount based on the setup and ongoing account work, not a percentage that quietly rewards spending more. You'll get an exact number after the free eligibility review, before anything is agreed to.</p>
+        </div>
+        <div class="faq-item show">
+          <h4>How long does approval take?</h4>
+          <p>It depends on Google and TechSoup's own verification queue, but it's often a few weeks once your Google for Nonprofits account is validated. I handle the application and keep it moving rather than letting it sit in a queue.</p>
+        </div>
+        <div class="faq-item show">
+          <h4>Have you actually worked inside a nonprofit, or just managed their ads?</h4>
+          <p>Both. Before this was an agency, I worked for a nonprofit and raised full-time support to serve overseas in cross-cultural contexts — so the constraints nonprofit teams operate under (limited staff time, donor-funded budgets, mission-first decision-making) aren't theoretical to me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="lp-closing-cta">
+    <div class="wrap">
+      <h2>Ready to see what your organization qualifies for?</h2>
+      <p>No cost, no obligation — I'll tell you honestly whether it's worth pursuing and what it would take to get it running well.</p>
+      <a href="#apply" class="btn">Get my free eligibility review ↑</a>
+      <div class="contact-detail" style="border-top:1px solid rgba(255,255,255,0.14); color:#B9C2C8; max-width:480px; margin:26px auto 0;">
+        <a href="mailto:neil@pyr.digital" style="color:#B9C2C8;">neil@pyr.digital</a> · 980.269.1892
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html#top" class="footer-brand">
+          <img src="../assets/pyr-icon.png" alt="PYR Digital">
+          <span class="brand-name">PYR Digital</span>
+        </a>
+        <p class="footer-tag">Google Ad Grant management for nonprofits — run by one senior person, start to finish.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#how">How it works</a>
+        <a href="#included">What's included</a>
+        <a href="#faq">FAQ</a>
+        <a href="../index.html">Full site</a>
+        <a href="mailto:neil@pyr.digital">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> PYR Digital</span>
+      <span>Google Ad Grant Management</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA — only shows on small screens (see the inline styles in <head>) -->
+<div class="lp-sticky-cta">
+  <a href="#apply" class="btn">Get my free eligibility review</a>
+</div>
+
+<script src="../script.js"></script>
+<script>
+  // Fires once the shared script.js reports a successful submission.
+  // Fill in reportFormConversion() with your Google Ads conversion action
+  // (Google Ads → Goals → Conversions → your "form submit" action → "Use tag directly")
+  // once you've pasted the gtag.js snippet at the top of this file.
+  function reportFormConversion(){
+    if (typeof gtag === 'function') {
+      // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYYYYY'});
+    }
+  }
+
+  (function(){
+    var statusEl = document.getElementById('formStatus');
+    if (!statusEl) return;
+    var seenSuccess = false;
+    var observer = new MutationObserver(function(){
+      if (!seenSuccess && statusEl.classList.contains('success')) {
+        seenSuccess = true;
+        reportFormConversion();
+      }
+    });
+    observer.observe(statusEl, { attributes: true, attributeFilter: ['class'] });
+  })();
+</script>
+</body>
+</html>
