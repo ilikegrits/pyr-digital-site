@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NXRRC8CG');</script>
+<!-- End Google Tag Manager -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#14202B">
@@ -16,24 +24,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Fraunces:ital,opsz,wght@1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-
-<!--
-  GOOGLE ADS CONVERSION TRACKING
-  Paste your Google tag (gtag.js) snippet here, right after the stylesheet,
-  so it loads on every visit from your PPC campaigns:
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
-  </script>
-
-  The form below already calls a `reportFormConversion()` stub after a
-  successful submit — fill it in with your Google Ads conversion ID/label
-  and it will fire automatically. See the bottom of this file.
--->
 
 <style>
   /* Landing-page-only additions — kept local so the rest of the site is untouched. */
@@ -97,6 +87,10 @@
 </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXRRC8CG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header id="siteHeader" class="lp-header">
   <div class="nav">
@@ -369,29 +363,5 @@
 </div>
 
 <script src="../script.js"></script>
-<script>
-  // Fires once the shared script.js reports a successful submission.
-  // Fill in reportFormConversion() with your Google Ads conversion action
-  // (Google Ads → Goals → Conversions → your "form submit" action → "Use tag directly")
-  // once you've pasted the gtag.js snippet at the top of this file.
-  function reportFormConversion(){
-    if (typeof gtag === 'function') {
-      // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYYYYY'});
-    }
-  }
-
-  (function(){
-    var statusEl = document.getElementById('formStatus');
-    if (!statusEl) return;
-    var seenSuccess = false;
-    var observer = new MutationObserver(function(){
-      if (!seenSuccess && statusEl.classList.contains('success')) {
-        seenSuccess = true;
-        reportFormConversion();
-      }
-    });
-    observer.observe(statusEl, { attributes: true, attributeFilter: ['class'] });
-  })();
-</script>
 </body>
 </html>
