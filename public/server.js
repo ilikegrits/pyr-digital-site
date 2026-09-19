@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, message, company } = req.body || {};
+    const { name, email, message, company, source, existing_grant: existingGrant } = req.body || {};
 
     // Honeypot: real visitors never fill this hidden field
     if (company) {
@@ -61,10 +61,14 @@ app.post('/api/contact', async (req, res) => {
         from: RESEND_FROM,
         to: [CONTACT_EMAIL],
         reply_to: email,
-        subject: `New website inquiry from ${name}`,
+        subject: source === 'google-ad-grants-landing-page'
+          ? `New Ad Grant lead from ${name}`
+          : `New website inquiry from ${name}`,
         html: `
+          ${source ? `<p><strong>Source:</strong> ${escapeHtml(source)}</p>` : ''}
           <p><strong>Name:</strong> ${escapeHtml(name)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          ${existingGrant ? `<p><strong>Already has a Google Ad Grant?</strong> ${escapeHtml(existingGrant)}</p>` : ''}
           <p><strong>Message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
         `
