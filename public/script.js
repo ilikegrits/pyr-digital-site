@@ -44,6 +44,21 @@ if (form) {
           statusEl.textContent = "Thanks! I'll get back to you within a business day.";
           statusEl.className = 'form-status success';
         }
+
+        // Fires only on a CONFIRMED successful submission (unlike GTM's
+        // automatic gtm.formSubmit, which fires the instant someone clicks
+        // submit regardless of whether the request actually succeeds).
+        // form_location tells GTM which page the lead came from, so the
+        // homepage contact form and the Google Ad Grants landing page can
+        // be split into separate triggers/reports.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'lead_form_success',
+          form_location: window.location.pathname.indexOf('google-ad-grants') !== -1
+            ? 'google_ad_grants'
+            : 'homepage'
+        });
+
         form.reset();
       } else if (statusEl) {
         statusEl.textContent = result.error || 'Something went wrong. Please try again.';
